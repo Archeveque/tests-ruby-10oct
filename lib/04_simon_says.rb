@@ -19,5 +19,16 @@ def first_word(words)
 end
 
 def titleize(word)
-  return word.split.map(&:capitalize).join(" ")
+  tab = word.split
+    my_array = []
+    j = 0
+    tab.each do |i|
+        j = j + 1
+        if i.length > 3 || j == 1
+           my_array.push(i.capitalize)
+        else
+           my_array.push(i)
+        end
+    end
+    return my_array.join(" ")
 end
